@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Отель «Вершина» — горный бутик-отель премиум-класса. 24 номера, спа, панорамный ресторан, приватная терраса.">
+  <title>Отель «Вершина» — тишина, воздух и панорама гор</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+
+  <!-- Прелоадер -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__logo">ВЕР<span>ШИНА</span></div>
+    <div class="preloader__bar"></div>
+  </div>
+
+  <!-- Прогресс-бар прокрутки -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        ВЕР<strong>ШИНА</strong>
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link" data-i18n="nav.home">Главная</a></li>
+          <li class="nav__item"><a href="rooms.html" class="nav__link" data-i18n="nav.rooms">Номера</a></li>
+          <li class="nav__item"><a href="advantages.html" class="nav__link" data-i18n="nav.advantages">Преимущества</a></li>
+          <li class="nav__item"><a href="reviews.html" class="nav__link" data-i18n="nav.reviews">Отзывы</a></li>
+          <li class="nav__item"><a href="contacts.html" class="nav__link" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang">
+          <button class="lang__btn is-active" data-lang="ru" aria-label="Русский">RU</button>
+          <span class="lang__sep">/</span>
+          <button class="lang__btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <button class="btn btn--sm btn--header" data-modal-open="modal-book" data-i18n="nav.book">Забронировать</button>
+        <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true" style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80') center/cover;opacity:0.55;"></div>
+      <div class="hero__overlay" aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(120deg, rgba(30,28,26,0.92) 0%, rgba(30,28,26,0.55) 55%, rgba(30,28,26,0.85) 100%);"></div>
+      <div class="hero__decor" aria-hidden="true" style="position:absolute;right:-80px;top:15%;width:420px;height:420px;border:1px solid rgba(184,155,123,0.35);border-radius:50%;"></div>
+      <div class="hero__decor" aria-hidden="true" style="position:absolute;right:-40px;bottom:-120px;width:340px;height:340px;border:1px solid rgba(184,155,123,0.22);border-radius:50%;"></div>
+
+      <div class="container" style="position:relative;z-index:2;">
+        <div class="hero__content" style="max-width:720px;">
+          <span class="accent" style="letter-spacing:0.2em;text-transform:uppercase;font-size:0.8rem;">Алтай · 1200 м над уровнем моря</span>
+          <h1 class="hero__title" data-i18n="hero.title" data-i18n-html="true" style="margin-top:18px;color:#f0e6db;font-size:var(--fs-5xl);font-weight:300;letter-spacing:0.05em;line-height:1.15;">
+            Тишина, воздух и <strong>панорама гор</strong>
+          </h1>
+          <p data-i18n="hero.subtitle" style="margin-top:24px;color:#cfc5bb;font-size:var(--fs-md);max-width:560px;">
+            Бутик-отель на 24 номера высоко в горах. Панорамные окна, авторская кухня, спа и полное отсутствие суеты.
+          </p>
+          <div style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;">
+            <button class="btn btn--pulse" data-modal-open="modal-book" data-i18n="hero.bookNow">Забронировать номер</button>
+            <a href="rooms.html" class="btn btn--ghost" data-i18n="hero.explore">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЧЁТЧИКИ -->
+    <section class="section" style="padding-block:64px;background:var(--color-bg-dark);color:#d9c8b2;">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;text-align:center;">
+          <div class="reveal delay-1">
+            <span class="stat__value"><span data-count="14">0</span></span>
+            <p style="color:#cfc5bb;letter-spacing:0.12em;text-transform:uppercase;font-size:0.78rem;margin-top:8px;" data-i18n="stats.years">лет гостеприимства</p>
+          </div>
+          <div class="reveal delay-2">
+            <span class="stat__value"><span data-count="24">0</span></span>
+            <p style="color:#cfc5bb;letter-spacing:0.12em;text-transform:uppercase;font-size:0.78rem;margin-top:8px;" data-i18n="stats.rooms">уникальных номеров</p>
+          </div>
+          <div class="reveal delay-3">
+            <span class="stat__value"><span data-count="4200">0</span></span>
+            <p style="color:#cfc5bb;letter-spacing:0.12em;text-transform:uppercase;font-size:0.78rem;margin-top:8px;" data-i18n="stats.guests">гостей ежегодно</p>
+          </div>
+          <div class="reveal delay-4">
+            <span class="stat__value"><span data-count="4.9" data-decimals="1">0</span></span>
+            <p style="color:#cfc5bb;letter-spacing:0.12em;text-transform:uppercase;font-size:0.78rem;margin-top:8px;" data-i18n="stats.rating">средняя оценка</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- О НАС -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;" class="about-grid">
+          <div class="reveal-left">
+            <span class="accent" style="letter-spacing:0.2em;text-transform:uppercase;font-size:0.78rem;" data-i18n="about.tag">О нас</span>
+            <h2 class="section-title" data-i18n="about.title" style="margin-top:12px;">Отель, в который хочется вернуться</h2>
+            <div class="divider"></div>
+            <p data-i18n="about.text1" style="margin-bottom:16px;">
+              «Вершина» — это 24 номера, каждый из которых спроектирован как отдельное пространство для отдыха. Мы соединили минимализм, натуральные материалы и панорамные окна, чтобы вы могли жить внутри пейзажа.
+            </p>
+            <p data-i18n="about.text2" style="margin-bottom:24px;">
+              Утренний кофе на террасе, спа-ритуалы после долгой прогулки, ужин от шефа с локальными продуктами — всё подчинено одной идее: у вас должно остаться ощущение, что вы провели время не в отеле, а в собственной горной резиденции.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:10px;">
+              <li class="reveal delay-1" style="display:flex;gap:12px;align-items:center;color:var(--color-text-muted);font-size:0.95rem;">
+                <span style="color:var(--color-accent);">—</span> <span data-i18n="about.point1">Панорамные окна в каждом номере</span>
+              </li>
+              <li class="reveal delay-2" style="display:flex;gap:12px;align-items:center;color:var(--color-text-muted);font-size:0.95rem;">
+                <span style="color:var(--color-accent);">—</span> <span data-i18n="about.point2">Авторская кухня и локальные продукты</span>
+              </li>
+              <li class="reveal delay-3" style="display:flex;gap:12px;align-items:center;color:var(--color-text-muted);font-size:0.95rem;">
+                <span style="color:var(--color-accent);">—</span> <span data-i18n="about.point3">Приватная терраса и спа-центр</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="reveal-right" style="position:relative;">
+            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=900&q=80" alt="Интерьер отеля" style="width:100%;height:560px;object-fit:cover;box-shadow:var(--shadow-lg);">
+            <div style="position:absolute;left:-24px;bottom:-24px;background:var(--color-accent);color:var(--color-bg-dark);padding:24px 28px;letter-spacing:0.12em;text-transform:uppercase;font-size:0.78rem;">
+              <span style="font-family:var(--font-display);font-size:2rem;display:block;line-height:1;">14</span>
+              лет в горах
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ИЗБРАННЫЕ НОМЕРА -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="reveal">
+          <span class="accent" style="letter-spacing:0.2em;text-transform:uppercase;font-size:0.78rem;" data-i18n="featured.tag">Размещение</span>
+          <h2 class="section-title" data-i18n="featured.title" style="margin-top:12px;">Избранные номера</h2>
+          <p class="section-sub" data-i18n="featured.sub">Три категории, которые чаще всего выбирают наши гости.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;">
+
+          <article class="room reveal delay-1">
+            <div class="room__media">
+              <span class="room__badge">Standard</span>
+              <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80" alt="Стандарт" loading="lazy">
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Стандарт</h3>
+              <div class="room__meta"><span>24 м²</span><span>2 гостя</span></div>
+              <div class="room__price">9 800 ₽ <small data-i18n="rooms.night">ночь</small></div>
+              <div class="room__tags">
+                <span class="tag">King-size</span>
+                <span class="tag">Душ</span>
+              </div>
+              <div class="room__actions">
+                <button class="btn btn--sm btn--outline" data-room-details="standard" data-i18n="btn.more">Подробнее</button>
+                <button class="btn btn--sm" data-modal-open="modal-book" data-room-type="standard" data-i18n="btn.book">Забронировать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room reveal delay-2">
+            <div class="room__media">
+              <span class="room__badge">Panoramic</span>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Панорамный" loading="lazy">
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Панорамный</h3>
+              <div class="room__meta"><span>42 м²</span><span>2 гостя</span></div>
+              <div class="room__price">19 200 ₽ <small data-i18n="rooms.night">ночь</small></div>
+              <div class="room__tags">
+                <span class="tag">Вид на горы</span>
+                <span class="tag">Ванна</span>
+              </div>
+              <div class="room__actions">
+                <button class="btn btn--sm btn--outline" data-room-details="panorama" data-i18n="btn.more">Подробнее</button>
+                <button class="btn btn--sm" data-modal-open="modal-book" data-room-type="panorama" data-i18n="btn.book">Забронировать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room reveal delay-3">
+            <div class="room__media">
+              <span class="room__badge">Suite</span>
+              <img src="https://images.unsplash.com/photo-1618219771732-6e4be90e0a3c?w=800&q=80" alt="Сьют" loading="lazy">
+            </div>
+            <div class="room__body">
+              <h3 class="room__title">Сьют с камином</h3>
+              <div class="room__meta"><span>58 м²</span><span>3 гостя</span></div>
+              <div class="room__price">27 600 ₽ <small data-i18n="rooms.night">ночь</small></div>
+              <div class="room__tags">
+                <span class="tag">Камин</span>
+                <span class="tag">Терраса</span>
+              </div>
+              <div class="room__actions">
+                <button class="btn btn--sm btn--outline" data-room-details="suite" data-i18n="btn.more">Подробнее</button>
+                <button class="btn btn--sm" data-modal-open="modal-book" data-room-type="suite" data-i18n="btn.book">Забронировать</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+          <a href="rooms.html" class="btn btn--outline" data-i18n="btn.allRooms">Все номера</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="section">
+      <div class="container">
+        <div class="reveal text-center">
+          <h2 class="section-title" data-i18n="adv.title">Почему выбирают нас</h2>
+          <p class="section-sub" data-i18n="adv.sub">Четыре причины, по которым гости возвращаются в «Вершину» снова.</p>
+        </div>
+
+        <div class="grid-3" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;">
+
+          <article class="card reveal delay-1">
+            <span class="card__icon">◇</span>
+            <h3 class="card__title" data-i18n="adv.spa.title">Спа и баня</h3>
+            <p class="card__text" data-i18n="adv.spa.text">Финская сауна, кедровая фито-бочка и авторские массажные ритуалы по предварительной записи.</p>
+          </article>
+
+          <article class="card reveal delay-2">
+            <span class="card__icon">◈</span>
+            <h3 class="card__title" data-i18n="adv.food.title">Ресторан «Панорама»</h3>
+            <p class="card__text" data-i18n="adv.food.text">Сезонное меню, локальные продукты и винная карта из 80 позиций. Завтрак включён.</p>
+          </article>
+
+          <article class="card reveal delay-3">
+            <span class="card__icon">◉</span>
+            <h3 class="card__title" data-i18n="adv.transfer.title">Трансфер из аэропорта</h3>
+            <p class="card__text" data-i18n="adv.transfer.text">Комфортный трансфер на Mercedes V-class. Встреча с табличкой в зале прилёта.</p>
+          </article>
+
+          <article class="card reveal delay-4">
+            <span class="card__icon">◐</span>
+            <h3 class="card__title" data-i18n="adv.privacy.title">Полная приватность</h3>
+            <p class="card__text" data-i18n="adv.privacy.text">Никаких шумных мероприятий и посторонних. Только вы, горы и тишина.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ ПРЕВЬЮ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="reveal text-center">
+          <h2 class="section-title" data-i18n="reviews.title">Что говорят гости</h2>
+          <p class="section-sub" data-i18n="reviews.sub">Собираем обратную связь после каждого заезда — и публикуем без купюр.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+
+          <article class="review reveal delay-1">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Анна К.</span>
+                <span class="review__city">Москва</span>
+              </div>
+              <div class="stars stars--animated">
+                <i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i>
+              </div>
+            </div>
+            <p class="review__text">Вид из панорамного номера — это что-то невероятное. Утром открываешь глаза и видишь горы. Персонал не навязчивый, но всегда рядом. Вернёмся обязательно.</p>
+            <div class="review__foot"><span>Октябрь 2025</span><span>Панорамный</span></div>
+          </article>
+
+          <article class="review reveal delay-2">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Дмитрий Л.</span>
+                <span class="review__city">Санкт-Петербург</span>
+              </div>
+              <div class="stars stars--animated">
+                <i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i>
+              </div>
+            </div>
+            <p class="review__text">Ресторан выше всяких похвал. Ужин на террасе с видом на закат — главное воспоминание поездки. Шефу отдельное спасибо за локальные продукты.</p>
+            <div class="review__foot"><span>Сентябрь 2025</span><span>Люкс</span></div>
+          </article>
+
+          <article class="review reveal delay-3">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Ольга С.</span>
+                <span class="review__city">Казань</span>
+              </div>
+              <div class="stars stars--animated">
+                <i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i>
+              </div>
+            </div>
+            <p class="review__text">Тишина, чистый воздух и полное отсутствие суеты. Идеально, чтобы выдохнуть после долгого года. Спа-центр бронируется по слотам — никого лишнего.</p>
+            <div class="review__foot"><span>Август 2025</span><span>Сьют</span></div>
+          </article>
+
+        </div>
+
+        <div style="text-align:center;margin-top:44px;" class="reveal">
+          <a href="reviews.html" class="btn btn--outline" data-i18n="btn.leaveReview">Оставить отзыв</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАРТА -->
+    <section class="section">
+      <div class="container">
+        <div class="reveal">
+          <h2 class="section-title" data-i18n="map.title">Как нас найти</h2>
+          <p class="section-sub" data-i18n="map.sub">Мы находимся в 12 км от трассы Р-256, в стороне от шумных туристических маршрутов.</p>
+        </div>
+
+        <div class="reveal-scale" style="box-shadow:var(--shadow-lg);">
+          <iframe
+            class="map-frame"
+            src="https://yandex.ru/map-widget/v1/?ll=85.742%2C50.287&z=12&pt=85.742,50.287,pm2rdm"
+            loading="lazy"
+            allowfullscreen
+            title="Карта расположения отеля «Вершина»"></iframe>
+        </div>
+
+        <p style="margin-top:16px;color:var(--color-text-muted);letter-spacing:0.06em;text-transform:uppercase;font-size:0.82rem;" data-i18n="map.address">
+          Республика Алтай, с. Верхний Уймон, ул. Горная, 7
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--dark" style="background:var(--color-bg-dark);padding-block:var(--space-2xl);">
+      <div class="container">
+        <div class="cta" style="background:transparent;padding:0;">
+          <div>
+            <h2 class="cta__title" data-i18n="cta.title" data-i18n-html="true">Забронируйте <span>напрямую</span> — выгоднее на 15%</h2>
+            <p class="cta__sub" data-i18n="cta.sub">Без комиссий агрегаторов. Гибкие условия отмены.</p>
+          </div>
+          <button class="btn btn--pulse" data-modal-open="modal-book" data-i18n="btn.book">Забронировать</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title" data-i18n="footer.about.title">Отель «Вершина»</h3>
+          <p class="footer__text" data-i18n="footer.about.text">
+            Горный бутик-отель премиум-класса. 24 номера, спа-центр, панорамный ресторан и приватная терраса с видом на вершины.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="VK">VK</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__title" data-i18n="footer.nav.title">Навигация</h3>
+          <ul class="footer__list">
+            <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li><a href="rooms.html" data-i18n="nav.rooms">Номера</a></li>
+            <li><a href="advantages.html" data-i18n="nav.advantages">Преимущества</a></li>
+            <li><a href="reviews.html" data-i18n="nav.reviews">Отзывы</a></li>
+            <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title" data-i18n="footer.contacts.title">Контакты</h3>
+          <ul class="footer__list">
+            <li><a href="tel:+74951234567" data-i18n="footer.phone">+7 (495) 123-45-67</a></li>
+            <li><a href="mailto:stay@vershina-hotel.ru" data-i18n="footer.email">stay@vershina-hotel.ru</a></li>
+            <li><span style="color:var(--color-text-light);opacity:0.72;font-size:var(--fs-sm);" data-i18n="footer.address">Республика Алтай, с. Верхний Уймон, ул. Горная, 7</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copy">© 2025 Отель «Вершина». Все права защищены.</span>
+        <span>Сделано для курсовой работы · <span data-year>2025</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Кнопка наверх -->
+  <button class="to-top" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- МОДАЛКА: БРОНИРОВАНИЕ -->
+  <div class="modal" id="modal-book" aria-hidden="true" role="dialog" aria-labelledby="book-title">
+    <div class="modal__dialog">
+      <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+      <div class="modal__content">
+        <h3 class="modal__title" id="book-title" data-i18n="modal.book.title">Бронирование</h3>
+        <p class="modal__sub" data-i18n="modal.book.sub">Заполните форму — консьерж свяжется с вами в течение 15 минут.</p>
+
+        <form class="form" id="booking-form" novalidate>
+          <div class="field">
+            <input class="field__input" type="text" name="name" id="book-name" placeholder=" " data-validate="required name" autocomplete="name" required>
+            <label class="field__label" for="book-name" data-i18n="modal.book.name">Имя и фамилия</label>
+            <span class="field__error"></span>
+          </div>
+
+          <div class="field">
+            <input class="field__input" type="tel" name="phone" id="book-phone" placeholder=" " data-validate="required phone" autocomplete="tel" required>
+            <label class="field__label" for="book-phone" data-i18n="modal.book.phone">Телефон</label>
+            <span class="field__error"></span>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <input class="field__input" type="date" name="checkin" id="book-checkin" placeholder=" " data-validate="required" required>
+              <label class="field__label" for="book-checkin" data-i18n="modal.book.checkin">Дата заезда</label>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <input class="field__input" type="date" name="checkout" id="book-checkout" placeholder=" " data-validate="required" required>
+              <label class="field__label" for="book-checkout" data-i18n="modal.book.checkout">Дата выезда</label>
+              <span class="field__error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <select class="field__select" name="roomtype" id="book-roomtype" required>
+              <option value="standard" data-i18n="rooms.filter.standard">Стандарт</option>
+              <option value="lux" data-i18n="rooms.filter.lux">Люкс</option>
+              <option value="panorama" data-i18n="rooms.filter.panorama">Панорамный</option>
+              <option value="suite" data-i18n="rooms.filter.suite">Сьют</option>
+            </select>
+            <label class="field__label" for="book-roomtype" data-i18n="modal.book.roomtype">Тип номера</label>
+            <span class="field__error"></span>
+          </div>
+
+          <div class="field">
+            <select class="field__select" name="guests" id="book-guests" required>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <label class="field__label" for="book-guests" data-i18n="modal.book.guests">Гостей</label>
+            <span class="field__error"></span>
+          </div>
+
+          <button type="submit" class="btn btn--block" data-i18n="modal.book.submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛКА: ДЕТАЛИ НОМЕРА -->
+  <div class="modal" id="modal-room" aria-hidden="true" role="dialog" aria-labelledby="room-title">
+    <div class="modal__dialog modal__dialog--wide">
+      <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+      <div class="modal__content">
+        <!-- содержимое рендерит modals.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Скрипты -->
+  <script src="js/i18n.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

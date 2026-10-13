@@ -1,0 +1,181 @@
+/* ============================================================
+   BASE — reset, типографика, утилиты
+   ============================================================ */
+
+   *,
+   *::before,
+   *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   html {
+     scroll-behavior: smooth;
+     -webkit-text-size-adjust: 100%;
+   }
+   
+   body {
+     font-family: var(--font-base);
+     font-size: var(--fs-base);
+     line-height: var(--lh-base);
+     color: var(--color-text);
+     background: var(--color-bg);
+     min-height: 100vh;
+     overflow-x: hidden;
+     text-rendering: optimizeLegibility;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+   }
+   
+   body.is-locked {
+     overflow: hidden;
+   }
+   
+   img,
+   svg,
+   video {
+     display: block;
+     max-width: 100%;
+     height: auto;
+   }
+   
+   a {
+     color: inherit;
+     text-decoration: none;
+   }
+   
+   button,
+   input,
+   textarea,
+   select {
+     font: inherit;
+     color: inherit;
+     border: none;
+     background: none;
+     outline: none;
+   }
+   
+   button {
+     cursor: pointer;
+   }
+   
+   ul,
+   ol {
+     list-style: none;
+   }
+   
+   /* --- ТИПОГРАФИКА --- */
+   h1, h2, h3, h4 {
+     font-weight: 300;
+     line-height: var(--lh-tight);
+     letter-spacing: var(--ls-wide);
+     color: var(--color-text);
+   }
+   
+   h1 { font-size: var(--fs-5xl); }
+   h2 { font-size: var(--fs-3xl); }
+   h3 { font-size: var(--fs-xl); font-weight: 500; }
+   h4 { font-size: var(--fs-lg); font-weight: 500; }
+   
+   p {
+     color: var(--color-text-muted);
+   }
+   
+   strong {
+     font-weight: 600;
+     color: var(--color-text);
+   }
+   
+   /* --- УТИЛИТЫ --- */
+   .container {
+     width: 100%;
+     max-width: var(--container-max);
+     margin-inline: auto;
+     padding-inline: var(--space-lg);
+   }
+   
+   .section {
+     padding-block: var(--space-3xl);
+   }
+   
+   .section--alt {
+     background: var(--color-bg-alt);
+   }
+   
+   .section--dark {
+     background: var(--color-bg-dark);
+     color: var(--color-text-light);
+   }
+   
+   .section--dark h1,
+   .section--dark h2,
+   .section--dark h3 {
+     color: var(--color-text-light);
+   }
+   
+   .section--dark p {
+     color: var(--color-text-light);
+     opacity: 0.85;
+   }
+   
+   .section-title {
+     font-size: var(--fs-3xl);
+     font-weight: 300;
+     letter-spacing: var(--ls-wide);
+     margin-bottom: var(--space-md);
+   }
+   
+   .section-sub {
+     font-size: var(--fs-md);
+     color: var(--color-text-muted);
+     max-width: 640px;
+     margin-bottom: var(--space-2xl);
+   }
+   
+   .text-center { text-align: center; }
+   .text-center .section-sub { margin-inline: auto; }
+   
+   .accent { color: var(--color-accent); }
+   .muted  { color: var(--color-text-muted); }
+   
+   .divider {
+     width: 60px;
+     height: 2px;
+     background: var(--color-accent);
+     margin-block: var(--space-md);
+   }
+   
+   .divider--center { margin-inline: auto; }
+   
+   /* --- ПРОКРУТКА (scrollbar) --- */
+   ::-webkit-scrollbar { width: 10px; height: 10px; }
+   ::-webkit-scrollbar-track { background: var(--color-bg-alt); }
+   ::-webkit-scrollbar-thumb {
+     background: var(--color-accent);
+     border-radius: 0;
+   }
+   ::-webkit-scrollbar-thumb:hover { background: var(--color-accent-dark); }
+   
+   /* --- ВЫДЕЛЕНИЕ --- */
+   ::selection {
+     background: var(--color-accent);
+     color: var(--color-bg-dark);
+   }
+   
+   /* --- ФОКУС --- */
+   :focus-visible {
+     outline: 2px solid var(--color-accent);
+     outline-offset: 3px;
+   }
+   
+   /* --- VISUALLY HIDDEN (a11y) --- */
+   .visually-hidden {
+     position: absolute !important;
+     width: 1px; height: 1px;
+     padding: 0; margin: -1px;
+     overflow: hidden;
+     clip: rect(0 0 0 0);
+     white-space: nowrap;
+     border: 0;
+   }

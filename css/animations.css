@@ -1,0 +1,310 @@
+/* ============================================================
+   ANIMATIONS — reveal, keyframes, hover, микро-анимации
+   ============================================================ */
+
+/* ---------- REVEAL: базовые состояния ---------- */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-blur {
+  opacity: 0;
+  transition:
+    opacity var(--tr-slower),
+    transform var(--tr-slower),
+    filter var(--tr-slower);
+  will-change: opacity, transform;
+}
+
+.reveal        { transform: translateY(46px); }
+.reveal-left   { transform: translateX(-64px); }
+.reveal-right  { transform: translateX(64px); }
+.reveal-scale  { transform: scale(0.92); }
+.reveal-blur   { filter: blur(10px); transform: translateY(24px); }
+
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible,
+.reveal-blur.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* задержки каскада */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.32s; }
+.delay-4 { transition-delay: 0.44s; }
+.delay-5 { transition-delay: 0.56s; }
+.delay-6 { transition-delay: 0.68s; }
+
+/* ---------- HERO: появление содержимого ---------- */
+@keyframes heroFade {
+  0%   { opacity: 0; transform: translateY(48px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeSide {
+  0%   { opacity: 0; transform: translateX(48px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.hero__content > * {
+  opacity: 0;
+  animation: heroFade 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero__content > *:nth-child(1) { animation-delay: 0.15s; }
+.hero__content > *:nth-child(2) { animation-delay: 0.35s; }
+.hero__content > *:nth-child(3) { animation-delay: 0.55s; }
+.hero__content > *:nth-child(4) { animation-delay: 0.75s; }
+
+/* ---------- HERO: пульсация главной кнопки ---------- */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(184, 155, 123, 0.5); }
+  70%  { box-shadow: 0 0 0 18px rgba(184, 155, 123, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 155, 123, 0); }
+}
+
+.btn--pulse {
+  animation: pulse 2.4s infinite;
+}
+
+/* ---------- ПРЕЛОАДЕР ---------- */
+@keyframes preloaderSlide {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+/* ---------- ЛОГОТИП: мерцание при hover ---------- */
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 0 rgba(217, 200, 178, 0); }
+  50%      { text-shadow: 0 0 18px rgba(217, 200, 178, 0.55); }
+}
+
+.logo:hover {
+  animation: glow 1.6s ease-in-out infinite;
+}
+
+/* ---------- SHAKE для ошибок формы ---------- */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-6px); }
+  40%      { transform: translateX(5px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(2px); }
+}
+
+/* ---------- POP для галочки успеха ---------- */
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.4); }
+  60%  { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ---------- РОСТ ЛИНИИ ТАЙМЛАЙНА ---------- */
+@keyframes lineGrow {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+/* ---------- ПОЯВЛЕНИЕ ЗВЁЗД ПО ОДНОЙ ---------- */
+@keyframes starIn {
+  0%   { opacity: 0; transform: scale(0.4) rotate(-45deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+.stars--animated i {
+  opacity: 0;
+  animation: starIn 0.5s cubic-bezier(0.18, 1.2, 0.35, 1) forwards;
+}
+
+.stars--animated i:nth-child(1) { animation-delay: 0.05s; }
+.stars--animated i:nth-child(2) { animation-delay: 0.15s; }
+.stars--animated i:nth-child(3) { animation-delay: 0.25s; }
+.stars--animated i:nth-child(4) { animation-delay: 0.35s; }
+.stars--animated i:nth-child(5) { animation-delay: 0.45s; }
+
+/* ---------- ЗАЛИВКА КНОПКИ (уже в components, усиливаем) ---------- */
+.btn:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* ---------- ПЛАВНОЕ ПОЯВЛЕНИЕ НОВОГО ОТЗЫВА ---------- */
+@keyframes reviewIn {
+  0%   { opacity: 0; transform: translateY(28px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.review--new {
+  animation: reviewIn 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- АНИМАЦИЯ ГАЛЕРЕИ (кроссфейд) ---------- */
+@keyframes crossFade {
+  0%, 45%   { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+
+.gallery--fading img {
+  animation: crossFade 6s infinite;
+}
+
+/* ---------- МЯГКОЕ ПОЯВЛЕНИЕ ПОДСЕКЦИЙ ПРИ ФИЛЬТРЕ ---------- */
+@keyframes filterIn {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.room--filter-in {
+  animation: filterIn 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- ПОДЧЁРКИВАНИЕ АКТИВНОГО ПУНКТА МЕНЮ (рост) ---------- */
+@keyframes navUnderline {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.nav__link.is-active::after {
+  animation: navUnderline 0.4s var(--tr-base) forwards;
+}
+
+/* ---------- ВЫЕЗД МОБИЛЬНОГО МЕНЮ ---------- */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.nav.is-open .nav__item {
+  animation: slideInRight 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.nav.is-open .nav__item:nth-child(1) { animation-delay: 0.05s; }
+.nav.is-open .nav__item:nth-child(2) { animation-delay: 0.12s; }
+.nav.is-open .nav__item:nth-child(3) { animation-delay: 0.19s; }
+.nav.is-open .nav__item:nth-child(4) { animation-delay: 0.26s; }
+.nav.is-open .nav__item:nth-child(5) { animation-delay: 0.33s; }
+
+/* ---------- МЯГКОЕ ПОЯВЛЕНИЕ МОДАЛКИ (для успеха) ---------- */
+@keyframes modalContentIn {
+  0%   { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.modal.is-open .modal__content {
+  animation: modalContentIn 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- HOVER: лёгкий подъём иконок соцсетей (уже в layout) ---------- */
+/* ---------- HOVER: подчёркивание в футере (уже в layout) ---------- */
+
+/* ---------- АНИМАЦИЯ СЧЁТЧИКОВ (визуальная подготовка) ---------- */
+.stat__value {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--fs-4xl);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.stat__value.is-counting {
+  animation: countPulse 0.4s ease;
+}
+
+@keyframes countPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+
+/* ---------- АНИМАЦИЯ КНОПКИ «НАВЕРХ» ПРИ HOVER ---------- */
+@keyframes arrowBounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+.to-top:hover svg {
+  animation: arrowBounce 0.7s ease infinite;
+}
+
+/* ---------- АНИМАЦИЯ ГРАНИЦЫ ПОЛЕЙ (фокус) ---------- */
+.field::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--tr-slow);
+  pointer-events: none;
+}
+
+.field:focus-within::after {
+  transform: scaleX(1);
+}
+
+/* ---------- МЯГКОЕ ПРОЯВЛЕНИЕ ТЕКСТА В CTA ---------- */
+.cta__title,
+.cta__sub {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--tr-slower), transform var(--tr-slower);
+}
+
+.cta.is-visible .cta__title {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.1s;
+}
+
+.cta.is-visible .cta__sub {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.28s;
+}
+
+/* ---------- ДЫХАНИЕ ДЕКОРА (фоновая SVG) ---------- */
+@keyframes floatSlow {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(10px, -14px); }
+}
+
+.hero__decor {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+/* ---------- ЛЁГКОЕ ПОЯВЛЕНИЕ ТЕГОВ (при hover) ---------- */
+.tag {
+  transition: background var(--tr-base), color var(--tr-base), transform var(--tr-base);
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- УМЕНЬШЕНИЕ АНИМАЦИЙ ДЛЯ PREFERS-REDUCED-MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-blur {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

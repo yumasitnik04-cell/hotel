@@ -1,0 +1,84 @@
+/* ============================================================
+   VARIABLES — палитра, типографика, отступы, тени
+   ============================================================ */
+
+   :root {
+    /* --- ЦВЕТА --- */
+    --color-bg:            #f5f3f0;
+    --color-bg-alt:        #ece7e2;
+    --color-bg-dark:       #1e1c1a;
+    --color-bg-darker:     #161412;
+    --color-accent:        #b89b7b;
+    --color-accent-light:  #d9c8b2;
+    --color-accent-dark:   #9a7f60;
+    --color-text:          #2e2a28;
+    --color-text-muted:    #5e5650;
+    --color-text-light:    #cfc5bb;
+    --color-border:        #d8d2ca;
+    --color-border-light:  #e6e0d8;
+    --color-white:         #ffffff;
+    --color-success:       #5a7d5a;
+    --color-error:         #a85a4a;
+    --color-overlay:       rgba(30, 28, 26, 0.72);
+  
+    /* --- ТИПОГРАФИКА --- */
+    --font-base:    'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    --font-display: Georgia, 'Times New Roman', serif;
+  
+    --fs-xs:   0.78rem;
+    --fs-sm:   0.9rem;
+    --fs-base: 1rem;
+    --fs-md:   1.12rem;
+    --fs-lg:   1.3rem;
+    --fs-xl:   1.6rem;
+    --fs-2xl:  2rem;
+    --fs-3xl:  2.6rem;
+    --fs-4xl:  3.4rem;
+    --fs-5xl:  4.2rem;
+  
+    --lh-tight: 1.2;
+    --lh-base:  1.65;
+  
+    --ls-tight: -0.01em;
+    --ls-base:  0;
+    --ls-wide:  0.06em;
+    --ls-wider: 0.18em;
+  
+    /* --- ОТСТУПЫ --- */
+    --space-xs:  6px;
+    --space-sm:  12px;
+    --space-md:  20px;
+    --space-lg:  32px;
+    --space-xl:  48px;
+    --space-2xl: 72px;
+    --space-3xl: 96px;
+  
+    /* --- РАДИУСЫ --- */
+    --radius-none: 0;
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   16px;
+    --radius-full: 999px;
+  
+    /* --- ТЕНИ --- */
+    --shadow-sm:  0 2px 8px rgba(30, 28, 26, 0.05);
+    --shadow-md:  0 8px 24px rgba(30, 28, 26, 0.08);
+    --shadow-lg:  0 18px 40px rgba(30, 28, 26, 0.12);
+    --shadow-xl:  0 28px 60px rgba(30, 28, 26, 0.18);
+    --shadow-accent: 0 10px 30px rgba(184, 155, 123, 0.35);
+  
+    /* --- ПЕРЕХОДЫ --- */
+    --tr-fast:   0.18s ease;
+    --tr-base:   0.32s cubic-bezier(0.22, 1, 0.36, 1);
+    --tr-slow:   0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    --tr-slower: 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  
+    /* --- РАЗМЕРЫ --- */
+    --container-max: 1200px;
+    --header-h:      78px;
+    --header-h-sm:   64px;
+    --z-header:      1000;
+    --z-modal:       2000;
+    --z-top-btn:     1500;
+    --z-loader:      3000;
+  }

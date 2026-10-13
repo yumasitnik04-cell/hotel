@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты отеля «Вершина» — адрес, телефон, email, как добраться, форма обратной связи.">
+  <title>Контакты — Отель «Вершина»</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__logo">ВЕР<span>ШИНА</span></div>
+    <div class="preloader__bar"></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">ВЕР<strong>ШИНА</strong></a>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link" data-i18n="nav.home">Главная</a></li>
+          <li class="nav__item"><a href="rooms.html" class="nav__link" data-i18n="nav.rooms">Номера</a></li>
+          <li class="nav__item"><a href="advantages.html" class="nav__link" data-i18n="nav.advantages">Преимущества</a></li>
+          <li class="nav__item"><a href="reviews.html" class="nav__link" data-i18n="nav.reviews">Отзывы</a></li>
+          <li class="nav__item"><a href="contacts.html" class="nav__link" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang">
+          <button class="lang__btn is-active" data-lang="ru">RU</button>
+          <span class="lang__sep">/</span>
+          <button class="lang__btn" data-lang="en">EN</button>
+        </div>
+        <button class="btn btn--sm btn--header" data-modal-open="modal-book" data-i18n="nav.book">Забронировать</button>
+        <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок -->
+    <section style="padding-block:var(--space-2xl) var(--space-xl);background:var(--color-bg-dark);color:var(--color-text-light);">
+      <div class="container">
+        <span class="accent" style="letter-spacing:0.2em;text-transform:uppercase;font-size:0.78rem;" data-i18n="contact.tag">Контакты</span>
+        <h1 style="color:#f0e6db;margin-top:14px;font-size:var(--fs-4xl);font-weight:300;letter-spacing:0.06em;" data-i18n="contact.title">Свяжитесь с нами</h1>
+        <p style="color:#cfc5bb;max-width:640px;margin-top:16px;" data-i18n="contact.sub">Консьерж отвечает в течение 15 минут в рабочее время.</p>
+      </div>
+    </section>
+
+    <!-- Инфо + форма -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:var(--space-3xl);align-items:start;" class="contacts-grid">
+
+          <!-- Левая колонка: инфо -->
+          <div class="reveal-left">
+            <h2 style="font-size:var(--fs-2xl);font-weight:300;letter-spacing:0.04em;margin-bottom:var(--space-lg);">Отель «Вершина»</h2>
+            <div class="divider"></div>
+
+            <div style="display:flex;flex-direction:column;gap:var(--space-lg);margin-top:var(--space-lg);">
+
+              <div>
+                <div style="font-size:var(--fs-xs);letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:6px;" data-i18n="contact.address.label">Адрес</div>
+                <div style="color:var(--color-text);font-size:var(--fs-md);" data-i18n="footer.address">Республика Алтай, с. Верхний Уймон, ул. Горная, 7</div>
+              </div>
+
+              <div>
+                <div style="font-size:var(--fs-xs);letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:6px;" data-i18n="contact.phone.label">Телефон</div>
+                <a href="tel:+74951234567" style="color:var(--color-text);font-size:var(--fs-md);transition:color var(--tr-base);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text)'" data-i18n="footer.phone">+7 (495) 123-45-67</a>
+              </div>
+
+              <div>
+                <div style="font-size:var(--fs-xs);letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:6px;" data-i18n="contact.email.label">Email</div>
+                <a href="mailto:stay@vershina-hotel.ru" style="color:var(--color-text);font-size:var(--fs-md);transition:color var(--tr-base);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text)'" data-i18n="footer.email">stay@vershina-hotel.ru</a>
+              </div>
+
+              <div>
+                <div style="font-size:var(--fs-xs);letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:6px;" data-i18n="contact.hours.label">Часы работы</div>
+                <div style="color:var(--color-text);font-size:var(--fs-md);" data-i18n="contact.hours.value">Круглосуточно, 365 дней в году</div>
+              </div>
+
+            </div>
+
+            <div style="margin-top:var(--space-2xl);padding:var(--space-lg);background:var(--color-bg-alt);border-left:3px solid var(--color-accent);">
+              <p style="font-size:var(--fs-sm);color:var(--color-text-muted);line-height:1.8;">
+                Для бронирования, вопросов по трансферу и организации мероприятий — звоните или пишите в любое время. Наш консьерж на связи круглосуточно.
+              </p>
+            </div>
+          </div>
+
+          <!-- Правая колонка: форма -->
+          <div class="reveal-right" style="background:var(--color-white);padding:var(--space-2xl);box-shadow:var(--shadow-md);">
+            <h3 style="font-size:var(--fs-xl);font-weight:300;letter-spacing:0.04em;margin-bottom:var(--space-sm);" data-i18n="contact.form.title">Обратная связь</h3>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:var(--space-xl);" data-i18n="contact.form.sub">Опишите ваш запрос — мы ответим в течение дня.</p>
+
+            <form class="form" id="contact-form" novalidate>
+
+              <div class="field">
+                <input class="field__input" type="text" name="name" id="ct-name" placeholder=" " data-validate="required name" autocomplete="name" required>
+                <label class="field__label" for="ct-name" data-i18n="contact.form.name">Имя</label>
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field">
+                <input class="field__input" type="email" name="email" id="ct-email" placeholder=" " data-validate="required email" autocomplete="email" required>
+                <label class="field__label" for="ct-email" data-i18n="contact.form.email">Email</label>
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field">
+                <textarea class="field__textarea" name="message" id="ct-message" placeholder=" " data-validate="required text" required></textarea>
+                <label class="field__label" for="ct-message" data-i18n="contact.form.message">Сообщение</label>
+                <span class="field__error"></span>
+              </div>
+
+              <button type="submit" class="btn btn--block" data-i18n="contact.form.submit">Отправить сообщение</button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="section section--alt" style="padding-block:var(--space-2xl);">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:var(--space-lg);">
+          <h2 class="section-title" style="margin-bottom:var(--space-sm);" data-i18n="map.title">Как нас найти</h2>
+          <p style="color:var(--color-text-muted);max-width:640px;" data-i18n="map.sub">Мы находимся в 12 км от трассы Р-256, в стороне от шумных туристических маршрутов.</p>
+        </div>
+
+        <div class="reveal-scale" style="box-shadow:var(--shadow-lg);">
+          <iframe
+            class="map-frame"
+            src="https://yandex.ru/map-widget/v1/?ll=85.742%2C50.287&z=12&pt=85.742,50.287,pm2rdm"
+            loading="lazy"
+            allowfullscreen
+            title="Карта расположения отеля «Вершина»"></iframe>
+        </div>
+
+        <p style="margin-top:16px;color:var(--color-text-muted);letter-spacing:0.06em;text-transform:uppercase;font-size:0.82rem;" data-i18n="map.address">
+          Республика Алтай, с. Верхний Уймон, ул. Горная, 7
+        </p>
+      </div>
+    </section>
+
+    <!-- Как добраться -->
+    <section class="section">
+      <div class="container">
+        <div class="reveal text-center">
+          <h2 class="section-title" data-i18n="contact.directions.title">Как добраться</h2>
+          <p class="section-sub" data-i18n="contact.directions.sub" style="margin-inline:auto;">Три способа доехать до отеля.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;">
+
+          <article class="card reveal delay-1">
+            <span class="card__icon">◆</span>
+            <h3 class="card__title" data-i18n="contact.direction.car.title">На автомобиле</h3>
+            <p class="card__text" data-i18n="contact.direction.car.text">По трассе Р-256 до поворота на Верхний Уймон, далее 12 км по указателям. Парковка на территории.</p>
+          </article>
+
+          <article class="card reveal delay-2">
+            <span class="card__icon">◇</span>
+            <h3 class="card__title" data-i18n="contact.direction.train.title">На поезде</h3>
+            <p class="card__text" data-i18n="contact.direction.train.text">До станции Бийск, далее трансфер отеля (2,5 часа). Бронируется за 24 часа.</p>
+          </article>
+
+          <article class="card reveal delay-3">
+            <span class="card__icon">◈</span>
+            <h3 class="card__title" data-i18n="contact.direction.plane.title">На самолёте</h3>
+            <p class="card__text" data-i18n="contact.direction.plane.text">Аэропорт Горно-Алтайск, далее трансфер отеля (1,5 часа). Встреча с табличкой.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--dark" style="background:var(--color-bg-dark);padding-block:var(--space-2xl);">
+      <div class="container">
+        <div class="cta" style="background:transparent;padding:0;">
+          <div>
+            <h2 class="cta__title" data-i18n="cta.title" data-i18n-html="true">Забронируйте <span>напрямую</span> — выгоднее на 15%</h2>
+            <p class="cta__sub" data-i18n="cta.sub">Без комиссий агрегаторов. Гибкие условия отмены.</p>
+          </div>
+          <button class="btn btn--pulse" data-modal-open="modal-book" data-i18n="btn.book">Забронировать</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title" data-i18n="footer.about.title">Отель «Вершина»</h3>
+          <p class="footer__text" data-i18n="footer.about.text">
+            Горный бутик-отель премиум-класса. 24 номера, спа-центр, панорамный ресторан и приватная терраса с видом на вершины.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="VK">VK</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__title" data-i18n="footer.nav.title">Навигация</h3>
+          <ul class="footer__list">
+            <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li><a href="rooms.html" data-i18n="nav.rooms">Номера</a></li>
+            <li><a href="advantages.html" data-i18n="nav.advantages">Преимущества</a></li>
+            <li><a href="reviews.html" data-i18n="nav.reviews">Отзывы</a></li>
+            <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title" data-i18n="footer.contacts.title">Контакты</h3>
+          <ul class="footer__list">
+            <li><a href="tel:+74951234567" data-i18n="footer.phone">+7 (495) 123-45-67</a></li>
+            <li><a href="mailto:stay@vershina-hotel.ru" data-i18n="footer.email">stay@vershina-hotel.ru</a></li>
+            <li><span style="color:var(--color-text-light);opacity:0.72;font-size:var(--fs-sm);" data-i18n="footer.address">Республика Алтай, с. Верхний Уймон, ул. Горная, 7</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copy">© 2025 Отель «Вершина». Все права защищены.</span>
+        <span>Сделано для курсовой работы · <span data-year>2025</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Модалка бронирования -->
+  <div class="modal" id="modal-book" aria-hidden="true" role="dialog">
+    <div class="modal__dialog">
+      <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+      <div class="modal__content">
+        <h3 class="modal__title" data-i18n="modal.book.title">Бронирование</h3>
+        <p class="modal__sub" data-i18n="modal.book.sub">Заполните форму — консьерж свяжется с вами в течение 15 минут.</p>
+
+        <form class="form" id="booking-form" novalidate>
+          <div class="field">
+            <input class="field__input" type="text" name="name" id="book-name-5" placeholder=" " data-validate="required name" required>
+            <label class="field__label" for="book-name-5" data-i18n="modal.book.name">Имя и фамилия</label>
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <input class="field__input" type="tel" name="phone" id="book-phone-5" placeholder=" " data-validate="required phone" required>
+            <label class="field__label" for="book-phone-5" data-i18n="modal.book.phone">Телефон</label>
+            <span class="field__error"></span>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <input class="field__input" type="date" name="checkin" id="book-ci-5" placeholder=" " data-validate="required" required>
+              <label class="field__label" for="book-ci-5" data-i18n="modal.book.checkin">Дата заезда</label>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <input class="field__input" type="date" name="checkout" id="book-co-5" placeholder=" " data-validate="required" required>
+              <label class="field__label" for="book-co-5" data-i18n="modal.book.checkout">Дата выезда</label>
+              <span class="field__error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <select class="field__select" name="roomtype" id="book-rt-5" required>
+              <option value="standard" data-i18n="rooms.filter.standard">Стандарт</option>
+              <option value="lux" data-i18n="rooms.filter.lux">Люкс</option>
+              <option value="panorama" data-i18n="rooms.filter.panorama">Панорамный</option>
+              <option value="suite" data-i18n="rooms.filter.suite">Сьют</option>
+            </select>
+            <label class="field__label" for="book-rt-5" data-i18n="modal.book.roomtype">Тип номера</label>
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <select class="field__select" name="guests" id="book-g-5" required>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <label class="field__label" for="book-g-5" data-i18n="modal.book.guests">Гостей</label>
+            <span class="field__error"></span>
+          </div>
+          <button type="submit" class="btn btn--block" data-i18n="modal.book.submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

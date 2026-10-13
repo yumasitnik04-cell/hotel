@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Отзывы гостей отеля «Вершина». Средняя оценка 4.9 из 5 на основе 268 отзывов.">
+  <title>Отзывы — Отель «Вершина»</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__logo">ВЕР<span>ШИНА</span></div>
+    <div class="preloader__bar"></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">ВЕР<strong>ШИНА</strong></a>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link" data-i18n="nav.home">Главная</a></li>
+          <li class="nav__item"><a href="rooms.html" class="nav__link" data-i18n="nav.rooms">Номера</a></li>
+          <li class="nav__item"><a href="advantages.html" class="nav__link" data-i18n="nav.advantages">Преимущества</a></li>
+          <li class="nav__item"><a href="reviews.html" class="nav__link" data-i18n="nav.reviews">Отзывы</a></li>
+          <li class="nav__item"><a href="contacts.html" class="nav__link" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang">
+          <button class="lang__btn is-active" data-lang="ru">RU</button>
+          <span class="lang__sep">/</span>
+          <button class="lang__btn" data-lang="en">EN</button>
+        </div>
+        <button class="btn btn--sm btn--header" data-modal-open="modal-book" data-i18n="nav.book">Забронировать</button>
+        <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок раздела -->
+    <section style="padding-block:var(--space-2xl) var(--space-xl);background:var(--color-bg-dark);color:var(--color-text-light);">
+      <div class="container">
+        <span class="accent" style="letter-spacing:0.2em;text-transform:uppercase;font-size:0.78rem;" data-i18n="rev.tag">Отзывы</span>
+        <h1 style="color:#f0e6db;margin-top:14px;font-size:var(--fs-4xl);font-weight:300;letter-spacing:0.06em;" data-i18n="rev.title">Что говорят гости</h1>
+        <p style="color:#cfc5bb;max-width:640px;margin-top:16px;" data-i18n="rev.sub">Собираем обратную связь после каждого заезда и публикуем без правок.</p>
+      </div>
+    </section>
+
+    <!-- Рейтинг-блок -->
+    <section class="section" style="padding-bottom:var(--space-xl);">
+      <div class="container">
+        <div class="rating reveal" data-rating>
+          <div>
+            <div class="rating__score">4.9<small> / 5</small></div>
+            <div class="stars stars--lg stars--animated" style="margin-top:12px;">
+              <i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i><i style="font-style:normal;">★</i>
+            </div>
+            <p style="margin-top:10px;font-size:var(--fs-xs);letter-spacing:0.12em;text-transform:uppercase;color:var(--color-text-muted);" data-i18n="rev.rating.count">на основе 268 отзывов</p>
+          </div>
+
+          <div class="rating__bars">
+            <div class="rating__row">
+              <span>5</span>
+              <span class="rating__track"><span class="rating__fill" data-value="92"></span></span>
+              <span>92%</span>
+            </div>
+            <div class="rating__row">
+              <span>4</span>
+              <span class="rating__track"><span class="rating__fill" data-value="6"></span></span>
+              <span>6%</span>
+            </div>
+            <div class="rating__row">
+              <span>3</span>
+              <span class="rating__track"><span class="rating__fill" data-value="1"></span></span>
+              <span>1%</span>
+            </div>
+            <div class="rating__row">
+              <span>2</span>
+              <span class="rating__track"><span class="rating__fill" data-value="1"></span></span>
+              <span>1%</span>
+            </div>
+            <div class="rating__row">
+              <span>1</span>
+              <span class="rating__track"><span class="rating__fill" data-value="0"></span></span>
+              <span>0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Сетка отзывов -->
+    <section class="section" style="padding-top:var(--space-xl);">
+      <div class="container">
+        <div data-reviews-grid style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;">
+
+          <!-- 1 -->
+          <article class="review reveal delay-1">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Анна Королёва</span>
+                <span class="review__city">Москва</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Вид из панорамного номера — это что-то невероятное. Утром открываешь глаза и видишь горы. Персонал не навязчивый, но всегда рядом. Вернёмся обязательно, уже забронировали на февраль.</p>
+            <div class="review__foot"><span>Октябрь 2025</span><span>Панорамный</span></div>
+          </article>
+
+          <!-- 2 -->
+          <article class="review reveal delay-2">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Дмитрий Лебедев</span>
+                <span class="review__city">Санкт-Петербург</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Ресторан выше всяких похвал. Ужин на террасе с видом на закат — главное воспоминание поездки. Шефу отдельное спасибо за локальные продукты. Завтраки — отдельный вид искусства.</p>
+            <div class="review__foot"><span>Сентябрь 2025</span><span>Люкс</span></div>
+          </article>
+
+          <!-- 3 -->
+          <article class="review reveal delay-3">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Ольга Смирнова</span>
+                <span class="review__city">Казань</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Тишина, чистый воздух и полное отсутствие суеты. Идеально, чтобы выдохнуть после долгого года. Спа-центр бронируется по слотам — никого лишнего, всё приватно.</p>
+            <div class="review__foot"><span>Август 2025</span><span>Сьют</span></div>
+          </article>
+
+          <!-- 4 -->
+          <article class="review reveal delay-4">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Михаил Орлов</span>
+                <span class="review__city">Новосибирск</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Приехали на три дня, остались на неделю. Трансфер из аэропорта — отдельное удовольствие: встретили с табличкой, по дороге рассказали про регион. Возвращаться будем всей семьёй.</p>
+            <div class="review__foot"><span>Август 2025</span><span>Люкс</span></div>
+          </article>
+
+          <!-- 5 -->
+          <article class="review reveal delay-5">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Екатерина Волкова</span>
+                <span class="review__city">Екатеринбург</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Приезжали отметить годовщину. Консьерж подготовил номер: свечи, шампанское, цветы — обо всём договорились за день до заезда в переписке. Никогда такого уровня сервиса не встречала.</p>
+            <div class="review__foot"><span>Июль 2025</span><span>Сьют</span></div>
+          </article>
+
+          <!-- 6 -->
+          <article class="review reveal delay-6">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Сергей Панов</span>
+                <span class="review__city">Москва</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ☆</div>
+            </div>
+            <p class="review__text">Отель прекрасный, но дорога до него — испытание. 12 км по грунтовке от трассы. В остальном — всё идеально. Совет: заказывайте трансфер у отеля, не рискуйте своей машиной.</p>
+            <div class="review__foot"><span>Июль 2025</span><span>Стандарт</span></div>
+          </article>
+
+          <!-- 7 -->
+          <article class="review reveal delay-1">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Ирина Морозова</span>
+                <span class="review__city">Москва</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Ездили с мужем на выходные. Панорамный номер — стоит каждого рубля. Ванна у окна, вид на хребет, тишина. Уезжать не хотелось. Отдельный респект спа-центру за кедровую бочку.</p>
+            <div class="review__foot"><span>Июнь 2025</span><span>Панорамный</span></div>
+          </article>
+
+          <!-- 8 -->
+          <article class="review reveal delay-2">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Артём Соколов</span>
+                <span class="review__city">Санкт-Петербург</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Работал удалённо неделю — Wi-Fi летает, в номере тихо, никто не мешает. Вечером спускался в ресторан, брал бокал вина и смотрел на закат. Идеальный workation, если честно.</p>
+            <div class="review__foot"><span>Июнь 2025</span><span>Люкс</span></div>
+          </article>
+
+          <!-- 9 -->
+          <article class="review reveal delay-3">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Наталья Зайцева</span>
+                <span class="review__city">Казань</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Были с детьми, брали Signature сьют. Две спальни, много места, детям раздолье. Персонал терпеливо относился ко всем капризам. Огромное спасибо за детское меню в ресторане.</p>
+            <div class="review__foot"><span>Май 2025</span><span>Сьют</span></div>
+          </article>
+
+          <!-- 10 -->
+          <article class="review reveal delay-4">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Владимир Тихонов</span>
+                <span class="review__city">Новосибирск</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Приезжал в командировку — по сути, это был отпуск. Утром работа, днём прогулки, вечером спа. Никогда бы не подумал, что отель в горах может быть настолько удобным для деловых поездок.</p>
+            <div class="review__foot"><span>Май 2025</span><span>Стандарт</span></div>
+          </article>
+
+          <!-- 11 -->
+          <article class="review reveal delay-5">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Марина Белова</span>
+                <span class="review__city">Екатеринбург</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="review__text">Ужин на террасе под звёздами — то, ради чего стоит ехать. Шеф вышел поздороваться, рассказал про продукты. Ощущение, что ты в гостях у друзей, а не в отеле. Редкое качество.</p>
+            <div class="review__foot"><span>Апрель 2025</span><span>Панорамный</span></div>
+          </article>
+
+          <!-- 12 -->
+          <article class="review reveal delay-6">
+            <div class="review__head">
+              <div class="review__author">
+                <span class="review__name">Алексей Никитин</span>
+                <span class="review__city">Москва</span>
+              </div>
+              <div class="stars">★ ★ ★ ★ ☆</div>
+            </div>
+            <p class="review__text">Всё отлично, но хотелось бы больше разнообразия в меню завтраков. К четвёртому дню захотелось чего-то нового. В остальном — сервис, номера, виды — на пятёрку.</p>
+            <div class="review__foot"><span>Апрель 2025</span><span>Люкс</span></div>
+          </article>
+
+        </div>
+
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+          <button class="btn btn--outline" data-show-more data-i18n="btn.showMore">Показать ещё</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма отзыва -->
+    <section class="section section--alt">
+      <div class="container" style="max-width:720px;">
+        <div class="reveal text-center" style="margin-bottom:var(--space-xl);">
+          <h2 class="section-title" data-i18n="rev.form.title">Оставить отзыв</h2>
+          <p class="section-sub" data-i18n="rev.form.sub" style="margin-inline:auto;">Ваш отзыв появится на сайте сразу после отправки.</p>
+        </div>
+
+        <form class="form reveal" id="review-form" novalidate style="background:var(--color-white);padding:var(--space-xl);box-shadow:var(--shadow-md);">
+
+          <div class="form__row">
+            <div class="field">
+              <input class="field__input" type="text" name="name" id="rev-name" placeholder=" " data-validate="required name" required>
+              <label class="field__label" for="rev-name" data-i18n="rev.form.name">Ваше имя</label>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <input class="field__input" type="text" name="city" id="rev-city" placeholder=" " autocomplete="address-level2">
+              <label class="field__label" for="rev-city" data-i18n="rev.form.city">Город</label>
+              <span class="field__error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label style="font-size:var(--fs-xs);letter-spacing:0.12em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:10px;display:block;" data-i18n="rev.form.rating">Оценка</label>
+            <div class="stars__input">
+              <button type="button" data-value="1" aria-label="1">★</button>
+              <button type="button" data-value="2" aria-label="2">★</button>
+              <button type="button" data-value="3" aria-label="3">★</button>
+              <button type="button" data-value="4" aria-label="4">★</button>
+              <button type="button" data-value="5" aria-label="5">★</button>
+            </div>
+            <input type="hidden" name="rating" value="">
+            <span class="field__error"></span>
+          </div>
+
+          <div class="field">
+            <textarea class="field__textarea" name="text" id="rev-text" placeholder=" " data-validate="required text" required></textarea>
+            <label class="field__label" for="rev-text" data-i18n="rev.form.text">Текст отзыва</label>
+            <span class="field__error"></span>
+          </div>
+
+          <button type="submit" class="btn btn--block" data-i18n="rev.form.submit">Опубликовать отзыв</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Площадки -->
+    <section class="section">
+      <div class="container">
+        <div class="reveal text-center">
+          <h2 class="section-title" data-i18n="rev.platforms.title">Мы также на площадках</h2>
+          <p class="section-sub" data-i18n="rev.platforms.sub" style="margin-inline:auto;">Оставьте отзыв там, где вам удобно.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:900px;margin-inline:auto;">
+          <a href="#" class="tile reveal delay-1" style="text-decoration:none;">
+            <span class="tile__icon">◆</span>
+            <span class="tile__label">Яндекс.Карты</span>
+          </a>
+          <a href="#" class="tile reveal delay-2" style="text-decoration:none;">
+            <span class="tile__icon">◇</span>
+            <span class="tile__label">Booking.com</span>
+          </a>
+          <a href="#" class="tile reveal delay-3" style="text-decoration:none;">
+            <span class="tile__icon">◈</span>
+            <span class="tile__label">Ostrovok</span>
+          </a>
+          <a href="#" class="tile reveal delay-4" style="text-decoration:none;">
+            <span class="tile__icon">◉</span>
+            <span class="tile__label">Tripadvisor</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--dark" style="background:var(--color-bg-dark);padding-block:var(--space-2xl);">
+      <div class="container">
+        <div class="cta" style="background:transparent;padding:0;">
+          <div>
+            <h2 class="cta__title" data-i18n="cta.title" data-i18n-html="true">Забронируйте <span>напрямую</span> — выгоднее на 15%</h2>
+            <p class="cta__sub" data-i18n="cta.sub">Без комиссий агрегаторов. Гибкие условия отмены.</p>
+          </div>
+          <button class="btn btn--pulse" data-modal-open="modal-book" data-i18n="btn.book">Забронировать</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title" data-i18n="footer.about.title">Отель «Вершина»</h3>
+          <p class="footer__text" data-i18n="footer.about.text">
+            Горный бутик-отель премиум-класса. 24 номера, спа-центр, панорамный ресторан и приватная терраса с видом на вершины.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="VK">VK</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__title" data-i18n="footer.nav.title">Навигация</h3>
+          <ul class="footer__list">
+            <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li><a href="rooms.html" data-i18n="nav.rooms">Номера</a></li>
+            <li><a href="advantages.html" data-i18n="nav.advantages">Преимущества</a></li>
+            <li><a href="reviews.html" data-i18n="nav.reviews">Отзывы</a></li>
+            <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title" data-i18n="footer.contacts.title">Контакты</h3>
+          <ul class="footer__list">
+            <li><a href="tel:+74951234567" data-i18n="footer.phone">+7 (495) 123-45-67</a></li>
+            <li><a href="mailto:stay@vershina-hotel.ru" data-i18n="footer.email">stay@vershina-hotel.ru</a></li>
+            <li><span style="color:var(--color-text-light);opacity:0.72;font-size:var(--fs-sm);" data-i18n="footer.address">Республика Алтай, с. Верхний Уймон, ул. Горная, 7</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copy">© 2025 Отель «Вершина». Все права защищены.</span>
+        <span>Сделано для курсовой работы · <span data-year>2025</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Модалка бронирования -->
+  <div class="modal" id="modal-book" aria-hidden="true" role="dialog">
+    <div class="modal__dialog">
+      <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+      <div class="modal__content">
+        <h3 class="modal__title" data-i18n="modal.book.title">Бронирование</h3>
+        <p class="modal__sub" data-i18n="modal.book.sub">Заполните форму — консьерж свяжется с вами в течение 15 минут.</p>
+
+        <form class="form" id="booking-form" novalidate>
+          <div class="field">
+            <input class="field__input" type="text" name="name" id="book-name-4" placeholder=" " data-validate="required name" required>
+            <label class="field__label" for="book-name-4" data-i18n="modal.book.name">Имя и фамилия</label>
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <input class="field__input" type="tel" name="phone" id="book-phone-4" placeholder=" " data-validate="required phone" required>
+            <label class="field__label" for="book-phone-4" data-i18n="modal.book.phone">Телефон</label>
+            <span class="field__error"></span>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <input class="field__input" type="date" name="checkin" id="book-ci-4" placeholder=" " data-validate="required" required>
+              <label class="field__label" for="book-ci-4" data-i18n="modal.book.checkin">Дата заезда</label>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <input class="field__input" type="date" name="checkout" id="book-co-4" placeholder=" " data-validate="required" required>
+              <label class="field__label" for="book-co-4" data-i18n="modal.book.checkout">Дата выезда</label>
+              <span class="field__error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <select class="field__select" name="roomtype" id="book-rt-4" required>
+              <option value="standard" data-i18n="rooms.filter.standard">Стандарт</option>
+              <option value="lux" data-i18n="rooms.filter.lux">Люкс</option>
+              <option value="panorama" data-i18n="rooms.filter.panorama">Панорамный</option>
+              <option value="suite" data-i18n="rooms.filter.suite">Сьют</option>
+            </select>
+            <label class="field__label" for="book-rt-4" data-i18n="modal.book.roomtype">Тип номера</label>
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <select class="field__select" name="guests" id="book-g-4" required>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <label class="field__label" for="book-g-4" data-i18n="modal.book.guests">Гостей</label>
+            <span class="field__error"></span>
+          </div>
+          <button type="submit" class="btn btn--block" data-i18n="modal.book.submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
